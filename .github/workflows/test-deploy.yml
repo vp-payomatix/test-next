@@ -21,4 +21,4 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             PR_NUMBER=${{ github.event.pull_request.number }}
-            sudo /opt/frontend-pr/deploy_front_pr.sh $PR_NUMBER
+            /opt/frontend-pr/deploy_front_pr.sh $PR_NUMBER
