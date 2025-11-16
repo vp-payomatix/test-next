@@ -31,7 +31,7 @@ jobs:
             --instance-ids "${{ secrets.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
             --comment "Deploying PR #$PR" \
-            --timeout-seconds 120 \
+            --timeout-seconds 60 \
             --parameters commands="sudo /opt/frontend-pr/deploy_front_pr.sh $PR" \
             --query "Command.CommandId" \
             --output text)
